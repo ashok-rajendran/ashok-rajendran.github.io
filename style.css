@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Body Styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
