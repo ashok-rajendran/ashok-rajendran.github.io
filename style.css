@@ -91,3 +91,77 @@ p {
 .container > *:not(:last-child) {
   margin-bottom: 30px;
 }
+
+/* Skills Table */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.skills-table td {
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+.skills-table .left {
+  text-align: left;
+  font-weight: bold;
+  width: 30%;
+}
+
+.skills-table .center {
+  text-align: center;
+  width: 5%;
+}
+
+.skills-table .right {
+  text-align: left; /* Changed from right to left */
+  width: 65%;
+}
+
+/* Experience Table */
+.experience-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.experience-table td {
+  padding: 8px 12px;
+  vertical-align: top;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.experience-table .left {
+  text-align: left;
+  font-weight: bold;
+  width: 30%; /* Fixed width for role */
+}
+
+.experience-table .center {
+  text-align: left; /* Align company names to the left */
+  padding-left: 20px; /* Add some space from the left edge */
+  width: 40%; /* Adjust width for company names */
+}
+
+.experience-table .right {
+  text-align: left; /* Align years to the left */
+  padding-left: 20px; /* Add consistent spacing from the left edge */
+  width: 30%; /* Fixed width for years worked */
+}
+
+/* Hobbies List */
+.hobbies-list {
+  display: flex;
+  justify-content: space-between; /* Equal spacing between items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-list li {
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
+}
