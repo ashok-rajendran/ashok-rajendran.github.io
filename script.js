@@ -1,4 +1,2 @@
-// Right now we don't have any dynamic actions
-// Later you can add animations, interactivity, etc. here!
-
+// No changes for now! Just keeping console log
 console.log("Website Loaded Successfully! 🚀");
