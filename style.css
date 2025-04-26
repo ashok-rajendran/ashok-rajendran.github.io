@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 2em;
+  color: #555;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.list-items {
+  list-style: none;
+  padding: 0;
+}
+
+.list-items li {
+  padding: 8px;
+  font-size: 1.1em;
+}
