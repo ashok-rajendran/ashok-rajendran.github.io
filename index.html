@@ -8,26 +8,44 @@
 </head>
 <body>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="your-photo.jpg" alt="Ashok R Photo" class="profile-photo">
+    <h1>Ashok Rajendran</h1>
+    <h2>(Preferred Name: Ashok R)</h2>
+    <p><strong>Occupation:</strong> Data Engineer</p>
+
+    <div class="social-links">
+      <a href="#" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      <a href="#" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+      <a href="mailto:your-email@example.com"><img src="email-icon.png" alt="Email"></a>
+    </div>
+  </section>
+
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="#hobbies">Hobbies</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
   </nav>
 
-  <h1>Ashok Rajendran</h1>
-  <h2>(Preferred Name: Ashok R)</h2>
-  <p><strong>Occupation:</strong> Data Engineer</p>
+  <!-- About Section -->
+  <section class="about">
+    <p>I am a passionate Data Engineer who loves building scalable pipelines and solving data challenges in the cloud and big data ecosystems.</p>
+  </section>
 
-  <div id="hobbies" class="section">
+  <!-- Hobbies Section -->
+  <section id="hobbies" class="section">
     <h3>Hobbies</h3>
     <ul class="list-items">
       <li>🏀 Basketball</li>
       <li>💪 Calisthenics</li>
       <li>🎧 Listening to Geopolitics</li>
     </ul>
-  </div>
+  </section>
 
-  <div id="skills" class="section">
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
     <h3>Skills</h3>
     <ul class="list-items">
       <li>🐍 Python</li>
@@ -50,15 +68,27 @@
       <li>🐚 Shell Script</li>
       <li>💻 Unix/Linux</li>
     </ul>
-  </div>
+  </section>
 
-  <div id="projects" class="section">
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
     <h3>Projects</h3>
-    <ul class="list-items">
-      <li>📄 Stored Procedure to Create Snowflake Views</li>
-      <li>🛡️ UDF Function to Apply Tokenization/Encryption on Specific Column Values</li>
-    </ul>
-  </div>
+    <div class="project-list">
+      <div class="project-card">
+        <h4>📄 Stored Procedure to Create Snowflake Views</h4>
+        <p>Automated view creation with dynamic SQL and stored procedures in Snowflake environment.</p>
+      </div>
+      <div class="project-card">
+        <h4>🛡️ UDF Function for Tokenization/Encryption</h4>
+        <p>Developed a robust UDF to encrypt or tokenize sensitive fields in structured datasets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Ashok R. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
