@@ -7,9 +7,9 @@
 
 /* Body Styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
+  font-family: 'Roboto', sans-serif; /* Use a modern font */
+  background-color: #f8f9fa; /* Light gray background */
+  color: #212529; /* Dark gray text */
   text-align: center;
   padding: 0 20px;
   scroll-behavior: smooth;
@@ -20,60 +20,68 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #333;
-  padding: 10px 0;
+  background-color: #343a40; /* Dark gray background */
+  padding: 15px 0;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar a {
-  color: white;
+  color: #ffffff; /* White text */
   text-decoration: none;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #ffcc00;
+  color: #ffc107; /* Gold hover effect */
 }
 
 /* Main Floating Container */
 .container {
-  max-width: 800px;
-  margin: 120px auto 50px;
-  background: white;
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* Slightly wider container */
+  margin: 140px auto 50px;
+  background: #ffffff; /* White background */
+  padding: 50px 40px;
+  border-radius: 15px; /* Softer corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Headings */
 h1 {
-  font-size: 2.5em;
+  font-size: 3em; /* Larger main heading */
   margin-bottom: 0.3em;
+  color: #343a40; /* Dark gray */
 }
 
 h2 {
   font-size: 1.8em;
-  color: #555;
+  color: #6c757d; /* Muted gray */
   margin-bottom: 0.5em;
 }
 
 p {
   font-size: 1.2em;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+  line-height: 1.6; /* Better readability */
 }
 
 /* Sections */
 .section {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .section h3 {
-  font-size: 2em;
+  font-size: 2.2em;
   margin-bottom: 20px;
+  color: #495057; /* Slightly darker gray */
+  border-bottom: 2px solid #ffc107; /* Gold underline */
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 /* List Items */
@@ -85,6 +93,7 @@ p {
 .list-items li {
   padding: 10px;
   font-size: 1.2em;
+  color: #495057;
 }
 
 /* Add some breathing space */
@@ -100,7 +109,7 @@ p {
 }
 
 .skills-table td {
-  padding: 8px 12px;
+  padding: 10px 15px;
   vertical-align: top;
 }
 
@@ -108,16 +117,19 @@ p {
   text-align: left;
   font-weight: bold;
   width: 30%;
+  color: #343a40;
 }
 
 .skills-table .center {
   text-align: center;
   width: 5%;
+  color: #6c757d;
 }
 
 .skills-table .right {
-  text-align: left; /* Changed from right to left */
+  text-align: left;
   width: 65%;
+  color: #495057;
 }
 
 /* Experience Table */
@@ -128,7 +140,7 @@ p {
 }
 
 .experience-table td {
-  padding: 8px 12px;
+  padding: 10px 15px;
   vertical-align: top;
   white-space: nowrap; /* Prevent text wrapping */
 }
@@ -136,25 +148,28 @@ p {
 .experience-table .left {
   text-align: left;
   font-weight: bold;
-  width: 30%; /* Fixed width for role */
+  width: 30%;
+  color: #343a40;
 }
 
 .experience-table .center {
-  text-align: left; /* Align company names to the left */
-  padding-left: 20px; /* Add some space from the left edge */
-  width: 40%; /* Adjust width for company names */
+  text-align: left;
+  padding-left: 20px;
+  width: 40%;
+  color: #495057;
 }
 
 .experience-table .right {
-  text-align: left; /* Align years to the left */
-  padding-left: 20px; /* Add consistent spacing from the left edge */
-  width: 30%; /* Fixed width for years worked */
+  text-align: left;
+  padding-left: 20px;
+  width: 30%;
+  color: #6c757d;
 }
 
 /* Hobbies List */
 .hobbies-list {
   display: flex;
-  justify-content: space-between; /* Equal spacing between items */
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -164,4 +179,16 @@ p {
   font-size: 1.2em;
   padding: 10px;
   text-align: center;
+  color: #495057;
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px 0;
+  background-color: #343a40;
+  color: #ffffff;
+  font-size: 0.9em;
+  border-top: 3px solid #ffc107;
 }
