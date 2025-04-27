@@ -1,151 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ashok R - Data Engineer</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <!-- Home Button -->
-    <div class="navbar-left">
-      <a href="#home" class="home-button">🏠 Home</a>
-    </div>
-
-    <!-- Center Navigation Links -->
-    <div class="navbar-center">
-      <a href="#hobbies">Hobbies</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-    </div>
-
-    <!-- Right Icons -->
-    <div class="navbar-right">
-      <a href="#contact" class="contact-icon">📞 Contact</a>
-      <a href="resume.pdf" class="resume-icon" download>📄 Resume</a>
-    </div>
-  </nav>
-
-  <!-- Floating Container -->
-  <div class="container">
-
-    <h1>Ashok Rajendran</h1>
-    <h2>(Preferred Name: Ashok R)</h2>
-    <p><strong>Occupation:</strong> Data Engineer</p>
-    <p><strong>Active since:</strong> Sept 2017 - Present</p>
-    <p><strong>IT Industry Experience:</strong> 7+ Years</p>
-
-    <div id="skills" class="section">
-      <h3>Skills</h3>
-      <table class="skills-table">
-        <tr>
-          <td class="left">Cloud Tech</td>
-          <td class="center">:</td>
-          <td class="right">AWS, GCP, Snowflake</td>
-        </tr>
-        <tr>
-          <td class="left">Big Data Tools</td>
-          <td class="center">:</td>
-          <td class="right">Apache Hadoop, Spark, Kafka, Hive, HBase, NiFi</td>
-        </tr>
-        <tr>
-          <td class="left">ETL Tools</td>
-          <td class="center">:</td>
-          <td class="right">Informatica</td>
-        </tr>
-        <tr>
-          <td class="left">Scripting/Programming</td>
-          <td class="center">:</td>
-          <td class="right">Shell Script, UNIX/Linux, Python, SQL</td>
-        </tr>
-        <tr>
-          <td class="left">RDBMS</td>
-          <td class="center">:</td>
-          <td class="right">Oracle, MySQL, DB2, Teradata</td>
-        </tr>
-        <tr>
-          <td class="left">NOSQL</td>
-          <td class="center">:</td>
-          <td class="right">MongoDB</td>
-        </tr>
-        <tr>
-          <td class="left">Visualization</td>
-          <td class="center">:</td>
-          <td class="right">Power BI, Tableau, Looker Studio</td>
-        </tr>
-        <tr>
-          <td class="left">Documentation</td>
-          <td class="center">:</td>
-          <td class="right">JIRA, Confluence</td>
-        </tr>
-        <tr>
-          <td class="left">Version Control</td>
-          <td class="center">:</td>
-          <td class="right">GIT, GitHub, Bitbucket</td>
-        </tr>
-      </table>
-    </div>
-
-    <div id="experience" class="section">
-      <h3>Experience</h3>
-      <table class="experience-table">
-        <tr>
-          <td class="left"><strong>Software Engineer - II (Data)</strong></td>
-          <td class="center">Best Buy India</td>
-          <td class="right">Apr 2025 - Present</td>
-        </tr>
-        <tr>
-          <td class="left"><strong>Senior Data Engineer</strong></td>
-          <td class="center">Carelon Global Solutions</td>
-          <td class="right">Dec 2022 - Apr 2025</td>
-        </tr>
-        <tr>
-          <td class="left"><strong>AWS Data Engineer</strong></td>
-          <td class="center">Legato Health Technologies</td>
-          <td class="right">Jan 2021 - Nov 2022</td>
-        </tr>
-        <tr>
-          <td class="left"><strong>Big Data Developer</strong></td>
-          <td class="center">Accenture Inc.</td>
-          <td class="right">Jun 2019 - Dec 2020</td>
-        </tr>
-        <tr>
-          <td class="left"><strong>Hadoop Developer</strong></td>
-          <td class="center">Accenture Inc.</td>
-          <td class="right">Sep 2017 - May 2019</td>
-        </tr>
-      </table>
-    </div>
-
-    <div id="projects" class="section">
-      <h3>Projects</h3>
-      <ul class="list-items">
-        <li>📄 Stored Procedure to Create Snowflake Views</li>
-        <li>🛡️ UDF Function to Apply Tokenization/Encryption on Specific Column Values</li>
-      </ul>
-    </div>
-
-    <div id="hobbies" class="section">
-      <h3>Hobbies</h3>
-      <ul class="list-items hobbies-list">
-        <li>🏀 Basketball</li>
-        <li>💪 Calisthenics</li>
-        <li>🎧 Listening to Geopolitics</li>
-      </ul>
-    </div>
-
-  </div> <!-- End of Container -->
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Ashok Rajendran. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashok's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Ashok Rajendran</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Ashok Rajendran</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt="Ashok Rajendran profile picture" class="about-pic"/>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ashok Rajendran</h1>
+        <p class="section__text__p2">Data Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/r-ashok/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/ashok-rajendran/'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>7+ years <br />Data Engineer</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelors in Engineering</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              With 7+ years of experience specializing in data modelling, pipeline orchestration, and Data Warehousing using
+              Hadoop and Snowflake. Proficient in Python, Spark, Hive, and AWS, GCP, &
+              Snowflake services. Skilled in ETL processes, query optimization, and ensuring data
+              quality. Seeking opportunities to collaborate and contribute to impactful Data
+              Engineering projects.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Big Data Tools</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Spark</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Hadoop</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Hive</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Hbase</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Airflow</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>NiFi</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Cloud Technologies</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Snowflake</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>AWS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>GCP</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Databricks</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Power BI</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Tableau</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Unix/Linux</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Stored Procedure to Create Snowflake Views</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">UDF Function to Apply Tokenization/Encryption on Specific Column Values</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Medallion Architecture</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:ashok.rajendran@hotmail.com">ashok.rajendran@hotmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/r-ashok/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Ashok Rajendran. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
-
