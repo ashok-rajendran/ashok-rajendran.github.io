@@ -167,6 +167,13 @@ body {
     line-height: 1.6;
 }
 
+.role-date {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
 /* Achievements section */
 .achievements {
     margin: 1rem 0;
@@ -275,7 +282,7 @@ body {
 
 /* Section styles */
 .section {
-    margin: 6rem auto;
+    margin: 3rem auto;
     max-width: 1200px;
     padding: 0 2rem;
     opacity: 0;
@@ -321,6 +328,11 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Highlight card for current role */
+.highlight-card {
+    /* border: 2px solid var(--accent); */
+}
+
 .card-header {
     display: flex;
     align-items: center;
@@ -333,195 +345,16 @@ body {
     color: var(--accent);
 }
 
-/* Timeline styles - Complete Revamp */
-.timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: calc(50% - 1px);
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: linear-gradient(to bottom, 
-        transparent 0%,
-        var(--accent) 5%,
-        var(--accent) 95%,
-        transparent 100%
-    );
-}
-
-.timeline-item {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-    position: relative;
-    margin: 2.5rem 0;
-    width: 50%;
-    left: 0;
-}
-
-.timeline-item:nth-child(even) {
-    align-self: flex-end;
-    justify-content: flex-start;
-    padding-left: 30px;
-    padding-right: 0;
-    left: 50%;
-}
-
-.timeline-marker {
-    position: absolute;
-    right: -7px;
-    top: 20px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: var(--card-bg);
-    border: 2px solid var(--accent);
-    box-shadow: 0 0 0 4px rgba(9, 132, 227, 0.1);
-    transition: all 0.3s ease;
-}
-
-.timeline-item:nth-child(even) .timeline-marker {
-    right: auto;
-    left: -7px;
-}
-
-.timeline-item:hover .timeline-marker {
-    transform: scale(1.3);
-    background: var(--accent);
-    box-shadow: 0 0 0 6px rgba(9, 132, 227, 0.2);
-}
-
-.timeline-content {
-    width: 100%;
-    position: relative;
-}
-
-.timeline-content .card {
-    margin: 0;
-    width: 100%;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.timeline-item:hover .card {
-    transform: translateX(-5px);
-}
-
-.timeline-item:nth-child(even):hover .card {
-    transform: translateX(5px);
-}
-
+/* Date tag styles */
 .date-tag {
-    position: absolute;
-    top: -25px;
-    right: 0;
+    display: inline-block;
     font-size: 0.85rem;
     color: var(--accent);
     font-weight: 600;
-    background: var(--card-bg);
+    background: rgba(9, 132, 227, 0.1);
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.timeline-item:nth-child(even) .date-tag {
-    right: auto;
-    left: 0;
-}
-
-.timeline-item:hover .date-tag {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Timeline responsive styles */
-@media (max-width: 768px) {
-    .timeline::before {
-        left: 30px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 0;
-    }
-
-    .timeline-item:nth-child(even) {
-        left: 0;
-        padding-left: 70px;
-        padding-right: 0;
-    }
-
-    .timeline-marker {
-        left: 23px;
-        right: auto;
-    }
-
-    .timeline-item:nth-child(even) .timeline-marker {
-        left: 23px;
-    }
-
-    .date-tag {
-        left: 70px;
-        right: auto;
-        top: -30px;
-    }
-
-    .timeline-item:nth-child(even) .date-tag {
-        left: 70px;
-    }
-
-    .timeline-item:hover .card,
-    .timeline-item:nth-child(even):hover .card {
-        transform: translateX(5px);
-    }
-}
-
-@media (max-width: 480px) {
-    .timeline {
-        padding: 1rem 0;
-    }
-
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item,
-    .timeline-item:nth-child(even) {
-        padding-left: 50px;
-    }
-
-    .timeline-marker {
-        left: 13px;
-        width: 12px;
-        height: 12px;
-    }
-
-    .timeline-item:nth-child(even) .timeline-marker {
-        left: 13px;
-    }
-
-    .date-tag {
-        left: 50px;
-        font-size: 0.8rem;
-        padding: 0.2rem 0.5rem;
-    }
-
-    .timeline-item:nth-child(even) .date-tag {
-        left: 50px;
-    }
-
-    .timeline-content .card {
-        padding: 1rem;
-    }
+    margin-top: 1rem;
 }
 
 /* Project styles */
@@ -537,7 +370,7 @@ body {
 }
 
 .project-links {
-    margin-top: auto;
+    margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
 }
@@ -692,23 +525,6 @@ body {
         gap: 15px;
     }
 
-    .timeline::before {
-        left: 19px;
-    }
-
-    .timeline-item {
-        grid-template-columns: 40px 1fr;
-        gap: 15px;
-    }
-
-    .date-tag {
-        position: relative;
-        left: 0;
-        top: 0;
-        margin-bottom: 0.5rem;
-        color: var(--accent);
-    }
-
     .timeline-content .card {
         padding: 1rem;
     }
@@ -731,28 +547,58 @@ body {
     }
 }
 
-/* Education grid styles */
+/* Education Section - Match Previous Experience */
 .education-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    display: block; /* Remove grid layout */
 }
 
 .education-grid .card {
-    margin: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Full width like experience cards */
+    margin-bottom: 20px; /* Consistent spacing */
 }
 
-.education-grid .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.previous-experience .card {
+    margin-bottom: 2rem;
 }
 
-/* Responsive adjustments for education grid */
-@media (max-width: 768px) {
-    .education-grid {
-        gap: 2rem;
-    }
+#experience ~ .section .card {
+    margin-bottom: 2rem;
+}
+
+.company-date {
+    font-size: 1rem;
+    color: var(--secondary);
+    font-weight: 500;
+    margin-left: 0.5rem;
+    font-style: italic;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skills-grid .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-grid .tech-stack {
+    margin-top: auto;
+}
+
+/* Skills Section Scroll Adjustment */
+#skills {
+    scroll-margin-top: 80px; /* Matches sticky header height */
+}
+
+/* Scroll adjustments for all sections */
+#experience,
+#skills,
+#projects,
+#education,
+#contact {
+    scroll-margin-top: 90px; /* Increased to 90px */
 } 
