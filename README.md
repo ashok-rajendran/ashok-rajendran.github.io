@@ -22,4 +22,4 @@ Check it out live: [https://ashok-rajendran.netlify.app/](https://ashok-rajendra
 
 ---
 
-Feel free to fork this repo or reach out if you have any feedback or questions!
+Feel free to reach out if you have any feedback or questions!
