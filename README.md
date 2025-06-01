@@ -18,7 +18,7 @@ Built with:
 
 ## 📫 Live Demo
 
-Check it out live: [https://your-username.github.io/your-portfolio-repo](https://ashok-rajendran.netlify.app/)
+Check it out live: [https://ashok-rajendran.netlify.app/](https://ashok-rajendran.netlify.app/)
 
 ---
 
