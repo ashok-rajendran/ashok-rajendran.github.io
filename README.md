@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio Website
 
-Welcome to my personal portfolio website! This site showcases my professional journey, skills, and projects. It's designed to give visitors a clear picture of who I am, what I do, and what I’m passionate about. 
+Welcome to my personal portfolio website! This site showcases my professional journey, skills, and projects. It's designed to give visitors a clear picture of who I am, what I do, and what I’m passionate about. **Full functional website is In-progress**.
 
 ## Features
 
