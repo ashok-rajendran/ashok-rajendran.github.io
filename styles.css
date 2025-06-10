@@ -79,6 +79,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -460,6 +461,30 @@ body {
     opacity: 1;
 }
 
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 1.5rem;
+    transition: background 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background: var(--gradient-end);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -689,4 +714,4 @@ body {
     .competencies-grid .card {
         padding: 25px;
     }
-} 
+}

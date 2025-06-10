@@ -12,7 +12,7 @@
     <header class="header">
         <nav class="nav-container">
             <div class="logo-section">
-                <div class="avatar">A</div>
+                <a href="#" class="avatar" onclick="location.reload(); return false;">A</a>
                 <div class="title-section">
                     <h1 class="name">Ashok</h1>
                     <p class="title">Data Engineer</p>
@@ -456,36 +456,6 @@
                         <p class="project-description">Designed and implemented a hybrid power supply system to improve efficiency and performance in Brushless DC motor applications.</p>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-school"></i>
-                        <h3>S.B.I.O.A Matriculation & Higher Secondary School, Chennai.<span class="company-date">Jun 2011 - Apr 2013</span></h3>
-                    </div>
-                    <p class="education-details">Higher Secondary Education</p>
-                    <p class="education-description">Completed Higher Secondary Education (HSE) with First Class, reflecting strong academic performance while actively engaging in co-curricular activities.</p>
-                    <div class="achievements">
-                        <ul>
-                            <li>Member of the High School Basketball Team, contributing to team events and inter-school matches.</li>
-                            <li>Participated in athletics competitions, showcasing versatility and commitment to sports.</li>
-                            <li>Maintained average academic performance while actively engaging in co-curricular activities.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-school"></i>
-                        <h3>S.B.O.A. School & Junior College, Chennai.<span class="company-date">Jun 1999 - Apr 2011</span></h3>
-                    </div>
-                    <p class="education-details">Central Board of Secondary Education</p>
-                    <p class="education-description">Successfully completed junior schooling with a CGPA of 7.4, demonstrating consistent academic performance alongside active participation in extracurricular roles.</p>
-                    <div class="achievements">
-                        <ul>
-                            <li>Served as Captain of the School Basketball Team and represented the school in CBSE Cluster tournaments.</li>
-                            <li>NCC Cadet for 2 years, held the role of Commanding Pilot for 1 year, and completed the NCC certification exam with distinction.</li>
-                            <li>Maintained average academic performance, while actively contributing to extracurricular activities.</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -552,5 +522,21 @@
             </div>
         </div>
     </footer>
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        scrollBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
 </body>
-</html> 
+</html>
