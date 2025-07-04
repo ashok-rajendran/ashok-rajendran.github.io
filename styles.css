@@ -497,6 +497,21 @@ body {
     }
 }
 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        /* Use 100% so it matches the set width above */
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: #0074D9; }
+    50% { border-color: transparent; }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .nav-container {
@@ -698,20 +713,107 @@ body {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-    .competencies-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
+/* Animated Name Section - Improved Typing Alignment and Caret */
+.animated-name-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background: #fff;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;   /* Not fixed anymore */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 2;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1.2s cubic-bezier(.77,0,.18,1);
+}
+
+body.show-all .animated-name-section {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.2s cubic-bezier(.77,0,.18,1);
+}
+
+.animated-name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(60px);
+    animation: fadeInUp 1.8s cubic-bezier(.77,0,.18,1) 0.5s forwards;
+}
+
+.animated-role {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(60px);
+    animation: fadeInUp 1.8s cubic-bezier(.77,0,.18,1) 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 600px) {
-    .competencies-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .competencies-grid .card {
-        padding: 25px;
-    }
+.blue-text {
+    color: #0074D9;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    /* No width or min-width here! */
+}
+
+/* Typing effect: animate max-width from 0 to large value */
+.animated-name .blue-text.typing {
+    border-right: 2px solid #0074D9;
+    max-width: 0;
+    animation: typingName 2.8s linear 1s forwards, blink-caret 1.1s step-end infinite alternate;
+}
+
+/* Hide blue-text by default for the role line */
+.animated-role .blue-text {
+    max-width: 0;
+    visibility: hidden;
+}
+
+/* When typing starts, show and animate */
+.animated-role .blue-text.typing {
+    visibility: visible;
+    border-right: 2px solid #0074D9;
+    max-width: 0;
+    animation: typingRole 3.6s linear 0s forwards, blink-caret 1.1s step-end infinite alternate;
+}
+
+/* When done, show fully */
+.animated-role .blue-text.done {
+    visibility: visible;
+    border-right: none;
+    animation: none;
+    max-width: 1000px;
+}
+
+/* Keyframes for each line */
+@keyframes typingName {
+    from { max-width: 0; }
+    to { max-width: 6ch; }
+}
+@keyframes typingRole {
+    from { max-width: 0; }
+    to { max-width: 28ch; }
 }
