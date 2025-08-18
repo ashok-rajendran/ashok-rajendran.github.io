@@ -38,7 +38,7 @@
                 </h2>
                 <p class="animated-role">
                     <span class="black-text">Data Engineer</span>
-                    <span class="blue-text">with 7+ Years of experience</span>
+                    <span class="blue-text">with <span id="years-experience"></span>+ Years of experience</span>
                 </p>
             </div>
         </section>
@@ -204,93 +204,92 @@
         <!-- Skills Section -->
         <section id="skills" class="section">
             <h2>Skills</h2>
-            <div class="skills-grid">
+            <div class="skills-grid competencies-grid">
+                <!-- Programming Languages -->
                 <div class="card">
                     <div class="card-header">
                         <i class="fas fa-code"></i>
                         <h3>Programming Languages</h3>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">SparkSQL</span>
-                        <span class="tech-tag">Shell Script</span>
-                    </div>
+                    <ul>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fas fa-database"></i> SQL</li>
+                        <li><i class="fas fa-terminal"></i> Shell Script</li>
+                        <li><i class="fas fa-database"></i> SparkSQL</li>
+                    </ul>
                 </div>
-
+                <!-- Cloud Platforms -->
                 <div class="card">
                     <div class="card-header">
                         <i class="fas fa-cloud"></i>
                         <h3>Cloud Platforms</h3>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">GCP</span>
-                        <span class="tech-tag">Snowflake</span>
-                    </div>
+                    <ul>
+                        <li><i class="fab fa-aws"></i> AWS</li>
+                        <li><i class="fab fa-google"></i> GCP</li>
+                        <li><i class="fas fa-snowflake"></i> Snowflake</li>
+                    </ul>
                 </div>
-
+                <!-- Big Data Technologies -->
                 <div class="card">
                     <div class="card-header">
                         <i class="fas fa-database"></i>
                         <h3>Big Data Technologies</h3>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Hadoop</span>
-                        <span class="tech-tag">Spark</span>
-                        <span class="tech-tag">Hive</span>
-                        <span class="tech-tag">Hbase</span>
-                        <span class="tech-tag">Kafka</span>
-                        <span class="tech-tag">Airflow</span>
-                        <span class="tech-tag">Nifi</span>
-                    </div>
+                    <ul>
+                        <li><i class="fas fa-server"></i> Hadoop</li>
+                        <li><i class="fas fa-bolt"></i> Spark</li>
+                        <li><i class="fas fa-table"></i> Hive</li>
+                        <li><i class="fas fa-database"></i> HBase</li>
+                        <li><i class="fas fa-stream"></i> Kafka</li>
+                        <li><i class="fas fa-random"></i> Airflow</li>
+                        <li><i class="fas fa-project-diagram"></i> Nifi</li>
+                    </ul>
                 </div>
-
-                <!-- BI & Visualization Tools Section -->
+                <!-- BI & Visualization Tools -->
                 <div class="card">
                     <div class="card-header">
                         <i class="fas fa-chart-pie"></i>
                         <h3>BI & Visualization</h3>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Tableau</span>
-                        <span class="tech-tag">Looker Studio Pro</span>
-                    </div>
+                    <ul>
+                        <li><i class="fas fa-chart-bar"></i> Power BI</li>
+                        <li><i class="fas fa-chart-line"></i> Tableau</li>
+                        <li><i class="fas fa-eye"></i> Looker Studio Pro</li>
+                    </ul>
                 </div>
-
-                <!-- Updated DevOps & Tools Section -->
+                <!-- DevOps & Tools -->
                 <div class="card">
                     <div class="card-header">
                         <i class="fas fa-cogs"></i>
                         <h3>DevOps & Tools</h3>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">Git</span>
-                        <span class="tech-tag">GitHub</span>
-                        <span class="tech-tag">Bitbucket</span>
-                        <span class="tech-tag">Bamboo</span>
-                        <span class="tech-tag">CI/CD</span>
-                        <span class="tech-tag">Jira</span>
-                        <span class="tech-tag">Confluence</span>
-                        <span class="tech-tag">Control-M</span>
-                    </div>
+                    <ul>
+                        <li><i class="fab fa-terraform"></i> Terraform</li>
+                        <li><i class="fab fa-git"></i> Git</li>
+                        <li><i class="fab fa-github"></i> GitHub</li>
+                        <li><i class="fab fa-bitbucket"></i> Bitbucket</li>
+                        <li><i class="fas fa-seedling"></i> Bamboo</li>
+                        <li><i class="fas fa-sync-alt"></i> CI/CD</li>
+                        <li><i class="fab fa-jira"></i> Jira</li>
+                        <li><i class="fab fa-confluence"></i> Confluence</li>
+                        <li><i class="fas fa-tasks"></i> Control-M</li>
+                    </ul>
                 </div>
-
+                <!-- Database & Operating Systems -->
                 <div class="card">
                     <div class="card-header">
                         <i class="fas fa-server"></i>
                         <h3>Database & Operating Systems</h3>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Oracle</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Teradata</span>
-                        <span class="tech-tag">Mainframe</span>
-                        <span class="tech-tag">Informatica</span>
-                        <span class="tech-tag">Linux/Unix</span>
-                    </div>
+                    <ul>
+                        <li><i class="fas fa-database"></i> Oracle</li>
+                        <li><i class="fas fa-database"></i> MySQL</li>
+                        <li><i class="fas fa-database"></i> Teradata</li>
+                        <li><i class="fas fa-desktop"></i> Mainframe</li>
+                        <li><i class="fas fa-project-diagram"></i> Informatica</li>
+                        <li><i class="fab fa-linux"></i> Linux/Unix</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -543,6 +542,6 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
         };
     </script>
-    <script src="scripts/showSections.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

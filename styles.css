@@ -613,7 +613,8 @@ body {
     font-style: italic;
 }
 
-/* Skills Grid */
+/* Skills Grid - Remove or comment out this block if not used elsewhere */
+/*
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -628,6 +629,7 @@ body {
 .skills-grid .tech-stack {
     margin-top: auto;
 }
+*/
 
 /* Skills Section Scroll Adjustment */
 #skills {
