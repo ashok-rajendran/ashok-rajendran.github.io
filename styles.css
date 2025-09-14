@@ -371,7 +371,7 @@ body {
 
 .card-header {
     display: flex;
-    align-items: center;
+    align-items: center; /* This ensures vertical centering */
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -379,6 +379,17 @@ body {
 .card-header i {
     font-size: 1.5rem;
     color: var(--accent);
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
+    justify-content: center; /* Add this */
+    min-width: 1.5rem; /* Add this to maintain consistent width */
+}
+
+.card-header h3 {
+    margin: 0;
+    line-height: 1; /* Add this to remove extra space around text */
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
 }
 
 /* Date tag styles */
