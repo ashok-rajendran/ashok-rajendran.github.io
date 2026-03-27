@@ -17,35 +17,120 @@
 .hero-section {
     padding: 6rem 2rem;
     text-align: center;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    color: white;
+    background: var(--background);
+    color: var(--text);
     margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Template-like title styling (uses workspace colors) */
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(9,132,227,0.08);
+    border: 1px solid rgba(9,132,227,0.18);
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 3px;
+    margin-bottom: 28px;
 }
 
 .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.6rem, 6.5vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    color: inherit;
 }
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
+.hero-title .line-2 { color: var(--accent); }
+.hero-title .line-3 {
+    color: var(--secondary);
+    font-weight: 700;
+    display: block;
+    margin-top: 28px;
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-    opacity: 0.8;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--secondary);
+    max-width: 680px;
+    margin: 0 auto 26px;
+}
+
+.hero-cta { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:28px; }
+.btn-primary {
+    padding: 12px 28px;
+    background: var(--accent);
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(9,132,227,0.25); }
+.btn-outline {
+    padding: 12px 28px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(45,52,54,0.06);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.btn-outline:hover { border-color: rgba(9,132,227,0.12); }
+
+/* Small floating stats on the right */
+.hero-stats {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 1;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(45,52,54,0.06);
+    padding: 14px 18px;
+    min-width: 140px;
+    box-shadow: 0 6px 14px rgba(3,10,18,0.04);
+}
+.stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+.stat-label {
+    font-size: 0.65rem;
+    color: var(--secondary);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 6px;
 }
 
 /* Base styles */
@@ -148,46 +233,12 @@ body {
     transform-origin: left;
 }
 
-/* Hero section */
-.hero-section {
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1s ease;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    opacity: 0.9;
-    animation: fadeInUp 1s ease 0.2s forwards;
-    opacity: 0;
-}
-
-/* Hero section additions */
-.hero-description {
-    max-width: 800px;
-    margin: 2rem auto 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    opacity: 0;
-    animation: fadeInUp 1s ease 0.4s forwards;
-}
+/* Hero section (consolidated) */
+.hero-section { height: auto; }
+.hero-content { position: relative; z-index: 1; }
+.hero-title { animation: fadeInUp 1s ease; }
+.hero-subtitle { font-size: 1.5rem; opacity: 0.9; }
+.hero-description { max-width: 800px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.6; }
 
 /* Role descriptions */
 .role-title {
