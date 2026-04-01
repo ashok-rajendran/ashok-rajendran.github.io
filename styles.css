@@ -800,6 +800,20 @@ body {
     font-size: 1rem;
 }
 
+/* Skills tags (compact, no levels) */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    .skills-tags { gap: 8px; }
+}
+
+/* (Removed star-rating styles — using core competency cards instead) */
+
 .competencies-grid li i {
     margin-right: 15px;
     color: var(--accent);
