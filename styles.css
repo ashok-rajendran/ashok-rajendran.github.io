@@ -979,3 +979,13 @@ body.show-all .animated-name-section {
 .profile-button i {
     font-size: 1.1em;
 }
+
+/* Certification key/value styles */
+.cert-row{margin:6px 0;font-size:0.95rem}
+.cert-key{font-weight:700;color:#0b3b73;margin-right:8px}
+.cert-value{color:#222}
+.cert-value a{color:inherit;text-decoration:underline}
+.cert-card .muted{opacity:0.85;color:#556}
+
+/* Temporarily hide Coding Profiles section. Remove this rule to re-enable. */
+#profiles{display:none !important}
