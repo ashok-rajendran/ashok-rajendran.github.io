@@ -1,2 +1,2 @@
-# ashok-rajendran.github.io
+# ashoksdialect.github.io
 Personal Website
